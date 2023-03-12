@@ -43,6 +43,8 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=sha
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
       -
         name: Login to Docker Hub
         if: github.event_name != 'pull_request'
