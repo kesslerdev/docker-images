@@ -39,6 +39,7 @@ jobs:
           # list of Docker images to use as base name for tags
           images: |
             ${{ matrix.image }}
+            directus/directus
           # generate Docker tags based on the following events/attributes
           tags: |
             type=schedule
